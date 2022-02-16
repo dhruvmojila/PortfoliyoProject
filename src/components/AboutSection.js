@@ -25,7 +25,7 @@ function AboutSection() {
         <button>Contact US</button>
       </div>
       <div className="image">
-        <img src={home1} alt="" />
+        <img src={home1} alt="home1" />
       </div>
     </div>
   );
