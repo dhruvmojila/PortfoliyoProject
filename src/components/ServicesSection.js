@@ -46,7 +46,7 @@ function ServicesSection() {
         </Cards>
       </Description>
       <Image>
-        <img src={home2} alt="home2" srcset="" />
+        <img src={home2} alt="home2" />
       </Image>
     </Services>
   );
