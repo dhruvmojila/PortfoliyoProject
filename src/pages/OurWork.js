@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
@@ -14,6 +14,7 @@ import {
   sliderContainer,
 } from "../animation";
 import useScroll from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 function OurWork() {
   const [element, controls] = useScroll();
@@ -60,6 +61,7 @@ function OurWork() {
           <img src={goodtimes} alt="goodtimes" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 }
@@ -70,6 +72,9 @@ const Work = styled(motion.div)`
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
   }
 `;
 

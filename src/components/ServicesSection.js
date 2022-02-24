@@ -12,51 +12,53 @@ import useScroll from "./useScroll";
 function ServicesSection() {
   const [element, controls] = useScroll();
   return (
-    <Services
-      variants={scrollReveal}
-      ref={element}
-      animate={controls}
-      initial="hidden"
-    >
-      <Description>
-        <h2>
-          High <span>quality</span> services
-        </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img src={clock} alt="icon" />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={teamwork} alt="icon" />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={diaphragm} alt="icon" />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={money} alt="icon" />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img src={home2} alt="home2" />
-      </Image>
-    </Services>
+    <Hide>
+      <Services
+        variants={scrollReveal}
+        ref={element}
+        animate={controls}
+        initial="hidden"
+      >
+        <Description>
+          <h2>
+            High <span>quality</span> services
+          </h2>
+          <Cards>
+            <Card>
+              <div className="icon">
+                <img src={clock} alt="icon" />
+                <h3>Efficient</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={teamwork} alt="icon" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={diaphragm} alt="icon" />
+                <h3>Diaphragm</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={money} alt="icon" />
+                <h3>Affordable</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+          </Cards>
+        </Description>
+        <Image>
+          <img src={home2} alt="home2" />
+        </Image>
+      </Services>
+    </Hide>
   );
 }
 
@@ -73,6 +75,9 @@ const Services = styled(About)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 const Card = styled.div`
   flex-basis: 1;
@@ -89,6 +94,16 @@ const Card = styled.div`
   p {
     font-size: 18px;
   }
+  @media (max-width: 1300px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
 `;
 
 export default ServicesSection;

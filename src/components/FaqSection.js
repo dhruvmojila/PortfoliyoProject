@@ -4,6 +4,7 @@ import { About } from "../styles";
 import Toggle from "./Toggle";
 import useScroll from "./useScroll";
 import { scrollReveal } from "../animation";
+import { AnimateSharedLayout } from "framer-motion";
 
 function FaqSection() {
   const [element, controls] = useScroll();
@@ -17,7 +18,7 @@ function FaqSection() {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <animateSharedLayout>
+      <AnimateSharedLayout>
         <Toggle title="How Do I Start?">
           <div className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
@@ -58,7 +59,7 @@ function FaqSection() {
             </p>
           </div>
         </Toggle>
-      </animateSharedLayout>
+      </AnimateSharedLayout>
     </Faq>
   );
 }

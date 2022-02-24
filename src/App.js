@@ -10,7 +10,6 @@ import styled from "styled-components";
 
 function App() {
   const location = useLocation();
-  console.log(location);
   return (
     <MainDiv>
       <GlobalStyle />
