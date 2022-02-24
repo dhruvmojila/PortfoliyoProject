@@ -6,12 +6,13 @@ import OurWork from "./pages/OurWork";
 import { Routes, Route, useLocation } from "react-router-dom";
 import MovieDetail from "./pages/MovieDetail";
 import { AnimatePresence } from "framer-motion";
+import styled from "styled-components";
 
 function App() {
   const location = useLocation();
   console.log(location);
   return (
-    <div className="App">
+    <MainDiv>
       <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
@@ -22,8 +23,12 @@ function App() {
           <Route path="/contact" element={<ContactUs />}></Route>
         </Routes>
       </AnimatePresence>
-    </div>
+    </MainDiv>
   );
 }
+
+const MainDiv = styled.div`
+  overflow: hidden;
+`;
 
 export default App;

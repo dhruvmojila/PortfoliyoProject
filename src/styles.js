@@ -11,6 +11,7 @@ export const About = styled(motion.div)`
 `;
 
 export const Description = styled.div`
+  /* background: #1b1b1b; */
   flex: 1;
   padding-right: 5rem;
   z-index: 2;
